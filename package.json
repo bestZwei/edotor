@@ -6,10 +6,10 @@
   "description": "Online Graphviz fiddle with language support",
   "private": true,
   "scripts": {
-    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack -p",
-    "build:prod": "NODE_OPTIONS=--openssl-legacy-provider webpack -p",
-    "build:dev": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode development",
-    "watch": "NODE_OPTIONS=--openssl-legacy-provider webpack --watch --mode development",
+    "build": "webpack -p",
+    "build:prod": "webpack -p",
+    "build:dev": "webpack --mode development",
+    "watch": "webpack --watch --mode development",
     "analyze": "webpack --mode production --profile --json > stats.json && webpack-bundle-analyzer stats.json"
   },
   "dependencies": {
@@ -17,7 +17,7 @@
     "dot-language-support": "^1.5.2",
     "jquery": "^3.6.0",
     "monaco-editor": "^0.34.0",
-    "monaco-languageclient": "^4.0.0",
+    "monaco-languageclient": "^2.0.0",
     "popper.js": "^1.16.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -51,6 +51,6 @@
     "webpack-cli": "^3.3.12"
   },
   "engines": {
-    "node": ">=18.x"
+    "node": "16.x"
   }
 }
